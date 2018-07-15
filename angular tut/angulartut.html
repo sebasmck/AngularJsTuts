@@ -1,0 +1,50 @@
+<html ng-app="app1" ng-init="person = {fName: 'Sebastian', lName: 'Farias'}; capitals = [{city: 'Bogota', state: 'cundinamarca'}, {city: 'Cartagena', state: 'Bolivar' }]">
+    <head>
+        <title>Angular tutorial</title>
+    </head>
+    <body>
+        
+        <div ng-controller="ctrl1">
+
+            <span>Values: </span>
+            <input type="text" ng-model="first">
+            <input type="text" ng-model="second">
+
+            <button ng-click="updateValue()" >Sum</button>
+
+            {{result}}
+
+            <!-- Expressions -->
+
+            <p>This is an expression: {{first}}</p>
+
+            <p>5 + 5 = {{5 + 5}}</p>
+
+            <!-- Data binding -->
+
+            <p>
+                the second value is: <span data-ng-bind="second"></span>
+            </p>
+
+            <!-- Build Strings with data -->
+
+            <p> {{ person.fName + " " + person.lName }}</p>
+
+            <!-- ng-repeat ForLoops -->
+
+            <ul>
+                <li ng-repeat="capital in capitals">
+                    {{'City: ' + capital.city}}
+                </li>
+            </ul>
+
+
+        </div>
+
+        <!-- Load the AngularJS library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+    
+        <!-- Load the JS Module -->
+        <script src="js/exam1.js"></script>
+    </body>
+</html>
