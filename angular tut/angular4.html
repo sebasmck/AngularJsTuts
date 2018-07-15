@@ -1,0 +1,51 @@
+<!doctype <!DOCTYPE html>
+<html ng-app="app4" ng-cloak>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Angular 4</title>
+    
+    <style>
+        [ng\:cloack], [ng-cloak], .ng-cloak{
+            display: none;
+        }
+
+        .bluetext{
+            color: blue;
+        }
+
+        .boldtext{
+            font-weight: bold;
+        }
+
+        .stripedblue{
+            color:#007FFF;
+            background-color: #DBE9F4;
+        }
+
+        .stripedbeige{
+            color: #CC0000;
+            background-color: #F5F5DC;
+        }
+
+    </style>
+    
+    
+    
+</head>
+<body>
+
+      <div ng-controller="eventCtrl">
+          <input ng-blur="blur = blur + 1" type="text">
+      </div>
+
+      <h4> blur Events: {{blur}} </h4>
+
+      
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+    
+        <!-- Load the JS Module -->
+        <script src="js/exam4.js"></script>
+
+</body>
+</html>
